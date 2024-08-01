@@ -9,6 +9,7 @@ export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:flutter_localization/flutter_localization.dart';
 export 'package:intl/intl.dart';
 export 'package:pretty_dio_logger/pretty_dio_logger.dart';
+export 'package:shared_preferences/shared_preferences.dart';
 
 export 'src/base/base_bloc.dart';
 export 'src/base/base_bloc_state.dart';
