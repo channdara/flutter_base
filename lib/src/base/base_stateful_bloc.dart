@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../flutter_base.dart';
+import '../extension/base_context_extension.dart';
+import '../flutter_base_config.dart';
+import 'base_bloc.dart';
+import 'base_bloc_state.dart';
+import 'base_stateful.dart';
 
 abstract class BaseStatefulBloc<T extends StatefulWidget, B extends BaseBloc>
     extends BaseStateful<T> {
@@ -19,7 +23,9 @@ abstract class BaseStatefulBloc<T extends StatefulWidget, B extends BaseBloc>
           builder: (context) {
             return PopScope(
               canPop: false,
-              child: Center(child: FlutterBase.instance.loadingDialogWidget),
+              child: Center(
+                child: FlutterBaseConfig.instance.loadingDialogWidget,
+              ),
             );
           },
         );
@@ -33,7 +39,7 @@ abstract class BaseStatefulBloc<T extends StatefulWidget, B extends BaseBloc>
         showDialog(
           context: context,
           builder: (context) {
-            return FlutterBase.instance.errorDialogWidget;
+            return FlutterBaseConfig.instance.errorDialogWidget;
           },
         );
         return;
